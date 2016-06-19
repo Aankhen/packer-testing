@@ -1,8 +1,9 @@
 # Testing Packer builds #
 
-To build these, first initialize and enter the Vagrant environment:
+To build these, first initialize the repository and enter the Vagrant environment:
 
 ```
+git submodule update
 vagrant up
 vagrant ssh
 $ cd /sync
@@ -10,15 +11,10 @@ $ cd /sync
 
 # boxcutter Ubuntu 16.04 #
 
-Taken from [boxcutter/ubuntu](https://github.com/boxcutter/ubuntu):
+[boxcutter/ubuntu](https://github.com/boxcutter/ubuntu):
 
 ```
-cd /sync/boxcutter-ubuntu
-```
-
-Output:
-
-```
+vagrant@vagrant-ubuntu-wily-64:~$ cd /sync/boxcutter-ubuntu
 vagrant@vagrant-ubuntu-wily-64:/sync/boxcutter-ubuntu$ packer build --only=virtualbox-iso -var-file=ubuntu1604.json -var "headless=true" ubuntu.json
 virtualbox-iso output will be in this color.
 
@@ -50,16 +46,11 @@ virtualbox-iso output will be in this color.
 
 # geerlingguy CentOS 7 #
 
-Taken from [geerlingguy/packer-centos-7](https://github.com/geerlingguy/packer-centos-7/):
+[geerlingguy/packer-centos-7](https://github.com/geerlingguy/packer-centos-7/):
 
 ```
-cd /sync/geerlingguy-centos-7
-sudo ansible-galaxy install -r requirements.txt
-```
-
-Output:
-
-```
+vagrant@vagrant-ubuntu-wily-64:~$ cd /sync/geerlingguy-centos-7
+vagrant@vagrant-ubuntu-wily-64:/sync/geerlingguy-centos-7$ sudo ansible-galaxy install -r requirements.txt
 vagrant@vagrant-ubuntu-wily-64:/sync/geerlingguy-centos7$ packer build --only=virtualbox-iso centos7.json
 virtualbox-iso output will be in this color.
 
@@ -93,16 +84,11 @@ Build 'virtualbox-iso' errored: Error starting VM: VBoxManage error:
 
 # geerlingguy Ubuntu 14.04 #
 
-Taken from [geerlingguy/packer-ubuntu-1404](https://github.com/geerlingguy/packer-ubuntu-1404):
+[geerlingguy/packer-ubuntu-1404](https://github.com/geerlingguy/packer-ubuntu-1404):
 
 ```
-cd /sync/geerlingguy-ubuntu-1404
-sudo ansible-galaxy install -r requirements.txt
-```
-
-Output:
-
-```
+vagrant@vagrant-ubuntu-wily-64:~$ cd /sync/geerlingguy-ubuntu-1404
+vagrant@vagrant-ubuntu-wily-64:/sync/geerlingguy-ubuntu-1404$ sudo ansible-galaxy install -r requirements.txt
 vagrant@vagrant-ubuntu-wily-64:/sync/geerlingguy-ubuntu-1404$ packer build --only=virtualbox-iso ubuntu1404.json
 virtualbox-iso output will be in this color.
 
