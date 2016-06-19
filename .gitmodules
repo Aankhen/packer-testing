@@ -1,0 +1,9 @@
+[submodule "boxcutter-ubuntu"]
+	path = boxcutter-ubuntu
+	url = https://github.com/boxcutter/ubuntu.git
+[submodule "geerlingguy-ubuntu-1404"]
+	path = geerlingguy-ubuntu-1404
+	url = https://github.com/geerlingguy/packer-ubuntu-1404.git
+[submodule "geerlingguy-centos7"]
+	path = geerlingguy-centos7
+	url = https://github.com/geerlingguy/packer-centos-7.git
