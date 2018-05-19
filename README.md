@@ -3,9 +3,8 @@
 To build these, first initialize the repository and enter the Vagrant environment:
 
 ```
-git submodule update
-vagrant up
-vagrant ssh
+git submodule update --init --recursive
+vagrant up && vagrant ssh
 $ cd /sync
 ```
 
