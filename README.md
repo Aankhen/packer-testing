@@ -5,7 +5,6 @@ To build these, first initialize the repository and enter the Vagrant environmen
 ```
 git submodule update --init --recursive
 vagrant up && vagrant ssh
-$ cd /sync
 ```
 
 # boxcutter Ubuntu 16.04 #
