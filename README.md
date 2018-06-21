@@ -7,6 +7,8 @@ git submodule update --init --recursive
 vagrant up && vagrant ssh
 ```
 
+**Note: I’m able to build these images successfully following an upgrade to Windows 10.**
+
 # boxcutter Ubuntu 16.04 #
 
 [boxcutter/ubuntu](https://github.com/boxcutter/ubuntu):
